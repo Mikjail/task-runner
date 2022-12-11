@@ -1,4 +1,4 @@
-const SRC = "../mon-cricket";
+const SRC = `../${process.argv[4]}`;
 
 const CONFIG = {
   SRC,
