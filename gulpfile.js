@@ -13,7 +13,7 @@ const fileChangedSync = (event) => {
 
 gulp.task("minify-css", function () {
   return gulp
-    .src(CONFIG.CSS_FILES)
+    .src(CONFIG.CSS_FILES, { allowEmpty: true })
     .pipe(concat("style.min.css"))
     .pipe(cleanCSS({ compatibility: "ie8" }))
     .pipe(gulp.dest(`${CONFIG.SRC}/dist`))
